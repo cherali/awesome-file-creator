@@ -1,0 +1,78 @@
+{
+  "name": "awesome-file-creator",
+  "displayName": "Awesome File Creator",
+  "description": "Create files based on user defined template and structure, support nesting structures.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "AliCheraghi",
+  "author": {
+    "name": "Ali Cheraghi",
+    "email": "alicheraghi148@gmail.com"
+  },
+  "bugs": "https://github.com/cherali/awesome-file-creator/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cherali/awesome-file-creator"
+  },
+  "icon": "icon.png",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "galleryBanner": {
+    "color": "#011129",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Formatters",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "awesome-file-creator.syncTemplateFiles",
+        "title": "Sync Template Files",
+        "category": "Awesome File Creator"
+      }
+    ],
+    "menus": {
+      "depth0": [],
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "awesome-file-creator.syncTemplateFiles",
+          "group": "0_navigation"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "depth0",
+        "label": "New Template Files"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.75.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.9.1"
+  },
+  "dependencies": {
+    "uuid4": "^2.0.3"
+  }
+}
