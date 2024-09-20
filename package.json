@@ -2,7 +2,7 @@
   "name": "awesome-file-creator",
   "displayName": "Awesome File Creator",
   "description": "Create files based on user defined template and structure, support nesting structures.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "publisher": "AliCheraghi",
   "author": {
